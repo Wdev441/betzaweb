@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra | Bella Joya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Muestra la alerta de éxito únicamente cuando se presiona confirmar compra (#exito) */
+        .alerta-exito { display: none; }
+        #exito:target .alerta-exito { display: block; }
+        #exito:target form { display: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">💎 BELLA JOYA</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="colecciones.html">Colecciones</a>
+            <a href="nosotros.html">Nosotros</a>
+        </nav>
+    </header>
+
+    <section class="sec" id="exito">
+        <h2 class="title">Finalizar Pedido</h2>
+        <p class="subtitle">Completa tus datos para enviar tu joya a domicilio</p>
+
+        <!-- AVISO DE ÉXITO (Puro HTML/CSS) -->
+        <div class="alerta alerta-exito">
+            <h2>🎉 ¡Comprado con éxito!</h2>
+            <p>Muchas gracias. Hemos registrado tu pedido de joyería.</p>
+            <br>
+            <a href="colecciones.html" class="btn">Seguir Comprando</a>
+        </div>
+
+        <!-- FORMULARIO DE COMPRA -->
+        <form action="#exito">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" placeholder="Ej. María Gómez" required>
+            
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+            
+            <label for="direccion">Dirección de Envío (Edomex)</label>
+            <textarea id="direccion" rows="2" placeholder="Calle, Número, Municipio" required></textarea>
+            
+            <button type="submit" class="btn" style="width: 100%;">Confirmar Compra</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bella Joya | Estado de México.</p>
+    </footer>
+
+</body>
+</html>
